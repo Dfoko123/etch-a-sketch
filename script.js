@@ -17,7 +17,19 @@ button.addEventListener('click',()=>{
         container.style.cssText=`display:flex; flex-wrap:wrap; flex-direction:row;gap:4px; flex:auto;`
         container.appendChild(childs);
         childs.addEventListener('mouseenter',()=>{
-            childs.style.backgroundColor='green';
+            let randomColor=Math.floor(Math.random()*3)+1;
+            switch(randomColor){
+                case 1:
+                    childs.style.backgroundColor='green';
+                    break;
+                case 2:
+                    childs.style.backgroundColor='yellow';
+                    break;
+                case 3:
+                    childs.style.backgroundColor='purple';
+                    break;
+            }
+            
         })
         childs.addEventListener('mouseleave',()=>{
             childs.style.backgroundColor='red';
